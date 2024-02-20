@@ -1,0 +1,547 @@
+#include <iostream>
+#include <conio.h>
+#include <windows.h>
+#include <math.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+using namespace std;
+
+int sum ( int x, int y ) {
+	
+	
+		
+	//for ( int b = 1 ; b >= 0; b--) {
+	/*int band = 0;
+	int cantbits = 0;
+	char bitsb [32];
+	
+	cout << endl;
+	cout << endl;
+	cout << "Digite el grupo de bits p/ sumarlos con el total: ";
+	
+	while ( band == 0 ) {
+	//registro de bits. 
+	
+	bitsb [cantbits] = getch ();	
+	cout << bitsb [cantbits];
+	
+	
+	
+	if ( bitsb [cantbits] == 13 ) {
+		
+		band = 1;
+		
+	}
+	
+	cantbits ++;
+	
+	}*/
+	
+	
+	//cout << endl;
+	
+	//cantbits --;
+	
+	/*cout << "Registrando el grupo de bits..." << endl;
+	
+	char bits [6] = { '0' , '0' , '0', '0', '0', '0'};
+	
+	cantbits = 6 -cantbits;
+	int i = 0;
+	
+	for ( int k = 6; cantbits < k; cantbits ++ ){
+	// llena bits.
+	
+		bits [cantbits] = bitsb [i];
+		Sleep (300);
+		cout << "..";
+		i++;
+	}
+	
+	cout << endl;
+	
+	/*
+	//2° grupo de bits.
+	
+	band = 0;
+	int cantbits2 = 0;
+	char bitsb2 [32];
+	
+	cout << endl;
+	cout << endl;
+	
+	cout << "Digite el 2do grupo de bits p/ sumarlos: ";
+	
+	while ( band == 0 ) {
+	//registro de bits. 
+	
+	bitsb2 [cantbits2] = getch ();	
+	cout << bitsb2 [cantbits2];
+	
+	
+	
+	if ( bitsb2 [cantbits2] == 13 ) {
+		
+		band = 1;
+		
+	}
+	
+	cantbits2 ++;
+	
+	}
+	
+	
+	cout << endl;
+	
+	cantbits2 --;
+	
+	cout << "Registrando el 2do grupo de bits..." << endl;
+	
+	char bits2 [6] = { '0' , '0' , '0', '0', '0', '0'};
+	
+	cantbits2 = 6 -cantbits2;
+	
+	i = 0;
+	
+	for ( int k = 6; cantbits2 < k; cantbits2 ++ ){
+	// llena bits.
+	
+		bits2 [cantbits2] = bitsb2 [i];
+		Sleep (300);
+		i++;
+	}
+	
+	cout << endl;
+	
+	//suma y conver.
+	
+	int stand = 0;
+	
+	/*if ( cantbits >= cantbits2 ) {
+		
+		stand = cantbits;
+	}
+	else {
+		
+		stand = cantbits2;
+	}*/
+	
+	//cout << endl;
+	//int sum [6];
+	
+	//cout << "Sumando..." << endl;
+	
+	//for ( int k = 0; k < 6; k++ ){
+	//suma
+	
+	int res = 0;
+	
+	if ( /*bits [k]*/ x == '1'  && /*bits2 [k]*/ y == '1'  ){
+	
+		//sum [k] = 0;
+		res = 0;
+		
+	}
+	else { 
+		
+		if ( /*bits [k]*/ x == '1' || /*bits2 [k]*/ y == '1'  ) {
+	
+		//sum [k] = 1;
+		res = 1;
+		
+	}
+	
+	else {
+		
+		//sum [k] = 0;
+		res = 0;
+		
+	}
+		
+	}
+	
+	//Sleep (100);
+	cout << "..";
+	
+	//}
+	
+	//cout << endl;
+	//cout << endl;
+	
+	/*cout << "Este es el resultado de la suma: " << endl;
+	for ( int k = 0; k < 6; k++ ){
+	// lmuestra suma.
+	
+		cout << sum [k];
+	}
+	
+	cout << endl;*/
+	
+	return res;	
+	
+	
+
+	
+}
+
+
+
+	
+int decbin (int x) {
+	
+
+	/*int x;
+	cout << "Digite un numero p/ pasarlo a binario: ";
+	cin >> x;	
+	cout << endl;*/
+	
+	//int op [32];
+	int res;
+	
+	int cont = 0; 
+	
+	while ( x > 0 ){
+		
+		res = x%2;
+		
+		//op [cont] = res;
+		return res;
+				
+		Sleep (30);
+		
+	}
+	
+	//cout << "Registrando el valor de los bits del texto..." << endl;
+	
+	
+	
+	/*for ( int f = 0; f < 6; f++ ) {
+		
+		return bits [f];
+		
+	}*/
+	
+}
+
+int mat(char e) {
+	
+	
+	char abc [26];
+	char babc = 'a';
+	
+	int num [26];
+	int rang = 13;
+	int res = 0;
+	
+	for ( int m = 0; m < 26; m++ ) {
+	//llena mat	abc
+		
+		
+		abc [m] = babc;
+		babc++;
+		
+	}
+	
+	
+	for ( int k = 0; k < 26; k++ ) {
+	//llena mat	rang
+	
+	res = rang+k;
+		
+	num [k] = res;
+		
+	}
+	
+	/*cout << "Esta es la tabla de vernam actual: " << endl;
+	for ( int m = 0; m < 26; m++ ) {
+	
+
+			cout << "|";
+			cout <<  abc[m];
+			cout << "|";
+			
+	}
+	
+	cout << endl;
+	
+	for ( int k = 0; k < 26; k++ ) {
+	
+
+			cout << "|";
+			cout <<  num[k];
+			cout << "|";
+
+		}*/
+	
+	/*int regtxt [contxt];*/
+	
+	//comp	txt
+	/*for ( int a = 0; a < 26 ; a++ ) {
+		
+		if ( abc [a] == e ) {
+			
+			f = num[a];
+			
+		} 
+		
+	}*/
+	
+		
+	
+	//comp	cl
+	
+	int f;
+	
+	for ( int g = 0; g < 26; g++ ) {
+		
+		if ( abc [g] == e ) {
+			
+			f = num[g];
+			
+		} 
+		
+		
+	}
+	
+	
+	
+	/*	cout << "Este es el orden de texto hasta ahora: " << endl;
+	cout << endl;
+	*/
+	
+	
+	return f;
+}
+
+
+int main( ) {
+	
+	char text [99];
+	int band = 0;
+	int contxt = 0;
+	
+	cout << "Ingrese el texto a encriptar por metodo vernam: " << endl;
+	
+	while ( band == 0 )	{
+		
+		text [contxt] = getch ();
+		cout << text [contxt];
+		
+		if ( text [contxt] == 13 ) {
+			
+			band = 1;
+			
+		}
+	
+	
+	contxt ++;	
+	}
+	
+	
+	contxt --;
+	
+	cout << endl;
+	
+	char cl [45];
+	band = 0;
+	int contcl = 0;
+	
+	cout << "Ingrese la clave p/ encriptar: " << endl;
+	
+	while ( band == 0 )	{
+		
+		cl [contcl] = getch ();
+		cout << cl [contcl];
+		
+		if ( cl [contcl] == 13 ) {
+			
+			band = 1;
+			
+		}
+	
+	
+	contcl ++;	
+	}
+	
+	contcl --; 
+	//se llama función mat.
+	
+	char c;
+	
+	int d;
+	int decxt [contxt];
+	int deccl [contcl];
+		
+	cout << "Se mostrara el orden del texto: " << endl;
+	
+	for ( int a = 0; a < contxt; a++ ) {
+			
+			c = text [a];
+			
+			d = mat(c);
+			
+			cout << "|";
+			cout << d;
+			cout << "|";
+			
+			decxt [a] = d;
+			/*cout << "|";
+			cout <<  regtxt[e];
+			cout << "|";*/
+
+	}
+	
+	cout << endl;
+	cout << endl;
+	
+		/*cout << endl;
+		cout << "Este es el orden de clave hasta ahora: " << endl;
+		cout << endl;*/
+	
+	cout << "Se mostrara el orden de la clave: " << endl;
+	
+	for ( int i = 0; i < contcl; i++ ) {
+	
+			c = cl [i];
+			
+			d = mat (c);
+			
+			cout << "|";
+			cout << d;
+			cout << "|";
+
+			deccl [i] = d;
+			/*cout << "|";
+			cout <<  regcl[e];
+			cout << "|";*/
+			
+
+	}
+	
+	cout << endl;	
+	cout << "Haciendo el calculo bin-dec... " << endl;
+	
+	cout << endl;
+	cout << "Se mostrara el valor bin del texto: " << endl;
+	
+	int f = 0;
+	int bitsxt [6][contxt];
+	
+	for ( int a = 0; a < contxt; a++ ) {
+			
+			
+			
+			f = decxt [a];
+			
+			
+			for ( int m = 6; m >= 0 ; m-- ) {
+			
+			
+			bitsxt [m][a] = decbin (f);
+			
+			f = f/2;
+			
+			//cout << bitsxt [m][a];
+			
+			}
+			//bitsb [a] = f;
+		
+			/*cout << "|";
+			cout <<  regtxt[e];
+			cout << "|";*/
+
+	}
+	
+	
+	
+	for ( int f = 0; f < contxt ; f++ ) {
+		
+		for ( int g = 0; g < 6 ; g++ ) {
+		
+		cout << bitsxt [g][f];
+		
+	}
+	
+	cout << endl;	
+	
+	}	
+	
+	f = 0;
+	
+	cout << "Se mostrara el valor bin de la clave: " << endl;
+	
+	int bitscl [6][contcl];
+	
+	for ( int a = 0; a < contcl; a++ ) {
+			
+			
+			
+			f = deccl [a];
+			
+			for ( int m = 6;  m >= 0 ; m-- ) {
+			
+			
+			bitscl [m][a] = decbin (f);
+			
+			f = f/2;
+			
+			
+			//cout << bitscl [m][a];
+			
+			}
+			//bitsb [a] = f;
+		
+			/*cout << "|";
+			cout <<  regtxt[e];
+			cout << "|";*/
+
+	cout << endl;
+	
+	}
+	
+	cout << endl;
+	
+	
+	
+	
+	for ( int f = 0; f < contcl ; f++ ) {
+		
+		for ( int g = 0; g < 6 ; g++ ) {
+		
+		cout << bitscl [g][f];
+		
+	}
+	
+	cout << endl;	
+	}
+	
+	cout << endl;
+	
+	cout << "fin." << endl;	
+	/*//suma
+	
+	for ( int i = 0; i < 6 ; i++ ) {
+		
+		
+	
+	}
+	
+	*/
+	return 0;
+}
+
+
+	
+/*
+
+
+void/int [nombrefun]() {
+	
+	
+	
+}
+
+
+
+}*/

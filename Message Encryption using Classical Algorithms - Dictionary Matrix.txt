@@ -1,0 +1,87 @@
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+using namespace std;
+
+int main() {
+
+/*	int c;
+	
+	//clave
+	cout << "Digite el tamaño de la clave: " << endl;
+	cin >> c; 
+	char cl[c];
+	
+	for(int i=0;i<5;i++){
+		
+		cl[i]=getch();
+		cout<<cl[i];
+		
+	}
+	
+	c = 0;
+	
+	
+	//texto
+	cout << "Digite el tamaño del mensaje a encriptar: " << endl;
+	cin >> c; 
+	char t[c];
+	for(int i=0;i<5;i++){
+		
+		t[i]=getch();
+		cout<<t[i];
+
+	}
+*/
+//llena abecedario	 
+
+	char abc[26][26];
+	int comp = 0;
+	char a = 'a';
+	
+	for ( int j = 0; j < 26;j++)	{
+		
+	
+	a = 'a';
+
+	
+		for ( int k = 0; k < 26;k++)	{
+			
+			
+			
+			
+			/*if ( j ){
+				
+			abc[k][j] = b;
+			b++;
+			
+			}
+			else {*/
+	
+			abc[k][j] = a;
+			a++;
+			
+			
+	//	}
+
+	
+	cout << endl;
+	
+	
+		}
+	}
+	
+	for ( int j = 0; j <26 ; j++){
+	
+		for ( int k = 0; k < 26; k++){
+		
+		cout << abc[k][j];
+		
+		}
+	cout << endl;	
+	}
+	
+	
+	return 0;
+}

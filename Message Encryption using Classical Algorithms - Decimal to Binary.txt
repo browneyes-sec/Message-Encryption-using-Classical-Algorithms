@@ -1,0 +1,48 @@
+#include <iostream>
+#include <windows.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+using namespace std;
+int main() {
+	int x;
+	cout << "Digite un numero p/ pasarlo a binario: ";
+	cin >> x;	
+	cout << endl;
+	
+	cout << "Haciendo el calculo... " << endl;
+	
+	int op [32];
+	int res;
+	int cont = 0; 
+	
+	while ( x > 0 ){
+		
+		res = x%2;
+		cout << res;
+		op [cont] = res;
+		cont ++;
+		
+		x = x-res;
+		x = x/2;
+		
+		Sleep (100);
+	}
+	
+	cout << endl;
+	cout << cont;
+	cout << endl;
+	
+
+	cont --;
+	cout << "Se mostrará el valor binario: " << endl;
+	
+	for (int sh = 0; cont >= sh; cont --)	{
+		
+		cout << op [cont];
+		Sleep (300);
+		
+	}
+	
+	return 0;
+	
+}

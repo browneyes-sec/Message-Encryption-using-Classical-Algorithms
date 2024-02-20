@@ -1,0 +1,216 @@
+#include <iostream>
+#include <windows.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+using namespace std;
+
+int main() {
+	cout << "	Bienvenido al programa de transposicion columnar inverso." << endl;
+	cout << "\n" << endl;
+	cout << "Procederemos a escribir la clave para la encriptacion simetrica." << endl;
+	int l;
+	cout << "Digite la longitud de la clave(de esta depende la long. del texto): " << endl;
+	cin >> l;
+	char c;
+	int op = (l-2)*l;
+	cout << "Su texto podra ser de: " << op << " . Desea cambiar esta longitud?(s = si, n = no) \n";
+	cin >> c;
+/*f ( c == )	{
+	
+			c = 's';
+
+	}*/
+	
+	while ( c != 'n') {
+		cout << "Digite la longitud de la clave(de esta depende la long. del texto): " << endl;
+		cin >> l;
+		op = (l-2)*l;
+		cout << "Su texto podra ser de: " << op << ". . Desea cambiar esta longitud?(s = si, n = no) \n" ;
+		cin >> c;
+		
+
+}
+system ("cls");
+	cout << "		Bienvenido al programa de transposicion columnar." << endl;
+	cout << "\n" << endl;
+	cout << "Procederemos a escribir la clave para la encriptacion simetrica." << endl;
+	cout << "Digite el texto de la clave(debe ingresar letra por letra.): " << endl;
+	l = l-1;
+	int m = l-1;
+	cout << endl;
+//	cout << "El array tendrá una extensión de  " << l << "x" << m << endl;
+//	cout << endl;
+	char enc[l][m];
+	int ord[l];
+	
+	for ( int i = 0; i <= l; i++){
+	
+	char text;
+/*f ( text == 'i') {
+	cin >> text;
+	}*/
+	
+	cout << "letra: " << endl;
+	cin >> text;
+	cout  << endl;
+	enc[i][0] = text;
+	cout << "Clave: ";
+	
+	for (int k = 0; k <= i; k++){
+		
+	cout << enc [k][0];
+	
+	}	
+	
+	
+	cout  << endl;
+	}
+	
+	
+	char abc[26];
+	char a = 'a';
+	//llena abecedario
+	for ( int j = 0; j < 26; j++){
+	
+	abc[j] = a;
+	a++;
+		
+	}
+cout << "Apunta tu clave, la necesitaras luego." << endl;
+
+system ("pause");
+
+	int seg[l];
+	
+	for ( int i = 0; i <= l; i++){
+	//for para encontrar letra
+	cout << "Buscando letra: " << enc [i][0] << endl;
+		for ( int c = 0; c < 26; c++){
+		//for para buscar posición
+		if ( enc [i][0] == abc [c] )	{
+		
+		c = c+1;
+		seg[i] = c; 
+		
+		cout << "Encontrada! Es la num.: " << seg[i] << endl;	
+		}
+	
+		}
+	cout  << endl;
+	}
+	
+//ordenar clave numericamente.
+
+
+
+int d = l;
+
+for ( int i = 0; i <= l; i++) {
+
+
+int c = d;
+
+
+cout << "Ordenando letra:" << seg [i] << endl;
+cout  << endl;
+	for ( int k = 0; k <= l; k++) {
+	//for que compara fila
+		if ( seg [i] > seg [k] )	{
+
+		c = c-1;
+		
+		}
+		
+		else {
+			if ( seg [i] == seg [k]  && k != i )	{
+
+			cout << "Alerta! Hay una o más iguales." << endl;
+										
+	}
+	}
+	}
+
+
+ord [i] = c;
+cout << "letra: " << seg [i] << ". Sera la #" << ord [i] <<  " en la columna." << endl;
+cout  << endl;
+cout  << endl;
+
+}
+
+
+//Texto
+	cout  << endl;
+	cout << "Digite el texto a enviar(debe ingresar letra por letra.): " << endl;
+	cout << "Su texto sera de: " << op << " caracteres." << endl;
+	cout << "Nota: al terminar de redactar tu mensaje debes rellenar tus espacios con caracteres (a-z)" << endl;
+	cout  << endl;
+
+
+	for ( int i = 1; i <= m; i++){
+	
+	for ( int k = 0; k <= l; k++ ) {
+	char text;
+	cout  << endl;
+	cout << "letra: " << endl;
+	cin >> text;
+	enc[k][i] = text;
+	cout << "Texto en la columna " << i << ": " << endl;
+	for (int c = 0; c <= k; c++){
+		
+	cout << enc [c][i];
+	
+	}
+	}	
+	
+
+	}
+	
+
+
+cout  << endl;
+
+// orden columnar
+
+cout << "Ud escribio: " << endl;
+	
+for ( int k = 1; k <= m; k++ ) {
+
+	
+	for (int c = 0; c <= l; c++){
+		
+	cout << enc [c][k];
+	
+	}
+cout << endl;
+}		
+ 
+cout << endl;
+
+cout << "Se mostrara el mensaje cifrado." << endl;
+
+for ( int e = 0; e <= l; e++) {
+//for n° columna
+for ( int i = 0; i <= l ; i++) {
+//for buscar columna
+
+
+	if ( ord [i] == e )	{
+			
+	
+	//	for ( int n = 0 ; n <= l ; n++){
+		for ( int k = 1; k <= m; k++ ) {
+
+		cout << enc [i][k];
+
+
+		}		
+
+}
+ 
+}
+}
+
+	return 0;
+
+}

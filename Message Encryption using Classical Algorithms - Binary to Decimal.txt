@@ -1,0 +1,105 @@
+#include <iostream>
+#include <windows.h>
+#include <conio.h>
+#include <math.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+using namespace std;
+
+int main() {
+	
+	int x = 0	;
+	int band = 0;
+	int cantbits = 0;
+	char reg [32];
+	
+	cout << "Digite los bits p/ pasar a decimal: ";
+	
+	while ( band == 0 ) {
+	//registro de bits. 
+	
+	reg [cantbits] = getch ();	
+	cout << reg [cantbits];
+	
+	
+	
+	if ( reg [cantbits] == 13 ) {
+		
+		band = 1;
+		
+	}
+	
+	cantbits ++;
+	
+	}
+	
+	
+	cout << endl;
+	
+	cantbits --;
+	
+	cout << "Registrando bits..." << endl;
+	
+	char bits [cantbits];
+	
+	for ( int k = 0; k <= cantbits; k++ ){
+	// llena bits.
+	
+		bits [k] = reg [k];
+		Sleep (300);
+		cout << bits [k];
+	}
+	
+	cout << endl;
+	cout << "Calculando..." << endl;
+	int res = 0;
+	int cont = 0;
+	int calc [cantbits];
+	int el = cantbits;
+	
+	el --;
+		
+	for ( int m = 0; m < cantbits; m++ ){
+	// cálculo.
+		
+		if ( bits [m] == '1' ) {
+			
+			calc [cont] = pow (2,el);
+			cont ++;
+			
+		}
+	
+	el = el -1;
+	
+	}
+	
+	int tot = 0;
+	
+	for ( int e = 0; e < cont; e++ ){
+	// cálculo.
+
+
+			tot = calc [e] + tot;
+			
+	}
+	
+	
+	/*for ( int m = 0; m <= cantbits; m++ ){
+	// cálculo.
+		
+		if ( bits [m] == '1' ) {
+			
+			res  = 2^el;
+			calc [cont] = res;
+			cout << calc[cont];
+			
+		}
+		
+	el --;
+	
+	}*/
+	
+	cout << "Se mostrara el valor decimal: " << tot << endl;
+
+	
+}

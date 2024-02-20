@@ -1,0 +1,107 @@
+#include <iostream>
+#include <stdio.h>
+#include <windows.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+using namespace std;
+
+int main() {
+	cout << "Bienvenido al metodo de encriptacion del cesar. \n";
+	int c;
+	cout << "Digite cant. letras(indique un estimado): \n";
+	cin >> c;
+//	c = c ++;
+//	cout << c;
+	char msg;
+	//cout << "Digite el mensaje(se tomara la primera letra que escriba.): \n";	
+	//cin << msg;
+	char text[c];
+	char enc[c];
+	//cout << msg;*/
+
+	//Declaración abc
+	char abc [30] = {'a' , 'b', 'c', 'd', 'e', 'f' ,'g' ,'h' ,'i' ,'j' ,'k' ,'l' ,'m' ,'n' ,'o' ,'p' ,'q' ,'r' ,'s' ,'t' ,'u' ,'v' ,'w' ,'x' ,'y' ,'z', '*', ';', '2'};
+
+
+cout << "Digite el mensaje(Ingresa una a una c/letra. \n";
+cout << "Nota: se tomara la 1era letra ingresada por defecto; si desea agregar un espacio utilice guion bajo '_'. Gracias): \n";
+
+for (int i = 0; i < c; i++) {
+	
+cout << "Letra: \n";	
+cin >> msg;
+text[i] = msg;
+cout << "\n";
+cout << "Ud ha escrito: ";
+	for (int k = 0; k <= i; k++) {
+	
+	cout << text [k];
+	
+
+	}
+cout << "\n";
+}
+cout << "Y Se cambiara por";
+
+for (int i = 0; i < c; i++) {
+
+cout << "...";	
+Sleep (500);	
+	for (int m = 0; m <= 28; m++) {
+	
+
+	if ( abc [m]  == text [i]  ) {
+	
+	m = m+3;
+	
+	enc [i] = abc[m];
+	
+	}
+	
+	}
+
+	
+
+}
+cout << "\n";
+cout << "Y su mensaje encriptado por el cesar es: ";
+
+for (int i = 0; i < c; i++ ) {
+	
+	cout << enc [i];
+}
+
+cout << "\n";
+cout << "Hasta pronto!";
+/*	cout << "Indique el número de desplazamiento que desea mover c/letra de su mensaje: " << endl;
+	cin >> k;
+	cout << m;
+	cout << k;*/
+/*	char msg[m];
+
+
+
+
+	
+
+/*for (int i = 0; i < m; i++) {
+	
+if (!text [i]  ) {
+
+	cout << "\n";
+	}
+		else
+	{	
+	cout << text [i];
+	}
+}
+*/	
+
+	/*
+	cout << char [m];
+	cout << m;
+	/*
+	for (int n = 0; );
+	*/
+	return 0;
+}

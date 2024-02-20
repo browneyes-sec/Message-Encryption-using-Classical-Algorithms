@@ -1,0 +1,174 @@
+#include <iostream>
+#include <windows.h>
+#include <conio.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+using namespace std;
+
+int main() {
+
+	int c;
+	int q;
+	
+	//clave
+	cout << "Digite el tamaño de la clave: " << endl;
+	cin >> q; 
+	char bcl[q];
+	
+	cout << "Digite la clave: ";
+	
+	for(int i=0;i<q;i++)	{
+		
+		bcl[i]=getch();
+		cout<<bcl[i];
+		
+	}
+	
+	cout << endl;
+	cout << "Perfecto!" << endl;
+	cout << endl;
+	
+	
+	cout << "Ahora: ";
+	
+	//texto
+	cout << "Digite el tamaño del mensaje a desencriptar: " << endl;
+	cin >> c;
+	
+	//int tam [1] = {c};
+	
+
+
+	char t[c];
+	cout << "Digite el texto del mensaje: ";
+	
+	for(int i=0;i<c;i++){
+		
+		t[i]=getch();
+		cout<<t[i];
+
+	}
+	cout << endl;
+	cout << "Desencriptando el mensaje: " << endl;
+	
+	//relleno de clave
+	
+	int cont = 0;
+	char cl [c];
+	
+	for ( int i = 0; i < c; i++ ){
+	
+	
+	cl [i] = bcl[cont];
+	
+	cont++;
+	
+	if ( cont >= q ) {
+		
+		cont = 0;
+		
+	}
+	
+	
+}
+	
+	
+	
+	
+	//llena abecedario	 
+
+	
+
+	char babc [90] = { ' ', '!', '"', '#', '$', '%', '&', '\'', '(', ')', '*', '+', ',', '-', '.', '/', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ':', ';', '<', '=', '>', '@', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '[', '\\', ']', '^', '_', '`', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+	char abc[90][90];
+	char a = 'a';
+	int m;
+	
+
+	for ( int j = 0; j < 90; j++)	{
+		
+	
+	m = j;
+	
+		for ( int k = 0; k < 90; k++)	{
+			
+			
+			abc[k][j] = babc [m];
+			m++;
+			
+			
+			if ( abc [k][j] == 'z' ) {
+				
+				m = 0;
+			}
+			
+				
+		}
+	
+	}
+	
+/*	for ( int j = 0; j < 90 ; j++){
+	
+		for ( int k = 0; k < 90; k++){
+		
+		cout << abc[k][j];
+		
+		}
+		
+	cout << endl;	
+	}*/
+	
+
+// encuentra coordenadas y mmuestra msj
+
+	char desenc [c];
+	
+	
+	for ( int k = 0 ; k < c; k++ ) {
+		
+	int fil = 0;
+	int col = 0;
+	for ( int m = 0 ; m < 90; m++){
+		
+			if ( cl [k] == abc [0][m] ){
+			
+			col = m;
+			cout << m;
+		}
+		
+	}
+	
+	
+		for ( int i = 0 ; i < 90 ; i++){
+		
+		if ( t [k] == abc [i][col] ){
+			
+			fil = i;
+			
+			cout << fil;
+		}
+	
+	}
+
+
+	desenc [k] = abc [fil][0];
+	
+	Sleep (20);
+	cout << "..";
+	
+}	
+	
+	
+	cout << endl;
+	cout << "Este es tu mensaje descifrado: ";
+	
+	for(int i=0; i < c;i++){
+		
+		cout << desenc[i];
+
+	}
+	
+	cout <<	endl;
+	
+	return 0;
+}

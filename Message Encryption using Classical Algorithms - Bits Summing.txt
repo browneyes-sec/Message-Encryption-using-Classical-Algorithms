@@ -1,0 +1,186 @@
+#include <iostream>
+#include <windows.h>
+#include <conio.h>
+#include <math.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+using namespace std;
+
+int main() {
+	
+	cout << "		Bienvenido a la conversion de bits en suma." << endl;
+	cout << "Nota: el programa aceptara 0's a la izquierda siempre y cuando sean necesario." << endl;
+	
+	
+//	for ( int b = 1 ; b >= 0; b--) {
+	
+	int band = 0;
+	int cantbits = 0;
+	char bitsb [6];
+	
+	cout << endl;
+	cout << endl;
+	cout << "Digite el grupo de bits p/ sumarlos con el total: ";
+	
+	while ( band == 0 ) {
+	//registro de bits. 
+	
+	bitsb [cantbits] = getch ();	
+	cout << bitsb [cantbits];
+	
+	
+	
+	if ( bitsb [cantbits] == 13 ) {
+		
+		band = 1;
+		
+	}
+	
+	cantbits ++;
+	
+	}
+	
+	
+	cout << endl;
+	
+	cantbits --;
+	
+	cout << "Registrando el grupo de bits..." << endl;
+	
+	char bits [6] = { '0', '0', '0', '0', '0', '0' };
+	
+	for ( int k = 6; cantbits <= 0 || k <= 0; k--  ){
+	// llena bits.
+		
+		
+		bits [k] = bitsb [cantbits];
+		Sleep (300);
+		cout << bits [k];
+		cout << "..";
+		cout << k;
+		cantbits -1;
+		
+	}
+	
+	
+	cout << endl;
+	
+	
+	//2° grupo de bits.
+	
+	band = 0;
+	int cantbits2 = 0;
+	char bitsb2 [6];
+	
+	cout << endl;
+	cout << endl;
+	
+	cout << "Digite el 2do grupo de bits p/ sumarlos: ";
+	
+	while ( band == 0 ) {
+	//registro de bits. 
+	
+	bitsb2 [cantbits2] = getch ();	
+	cout << bitsb2 [cantbits2];
+	
+	
+	
+	if ( bitsb2 [cantbits2] == 13 ) {
+		
+		band = 1;
+		
+	}
+	
+	cantbits2 ++;
+	
+	}
+	
+	
+	cout << endl;
+	
+	cantbits2 --;
+	
+	cout << "Registrando el 2do grupo de bits..." << endl;
+	
+	char bits2 [6] = { '0', '0', '0', '0', '0', '0' };
+	
+	for ( int k = 6; cantbits2 <= 0 || k <= 0; k-- ){
+	// llena bits.
+	
+		bits2 [k] = bitsb2 [cantbits2];
+		Sleep (300);
+		cout << bits2 [k];
+		cout << "..";
+		cout << k;
+		cantbits2 -1;
+	
+	}
+	
+	cout << endl;
+	
+	//suma y conver.
+	
+	/*int stand = 0;
+	
+	if ( cantbits >= cantbits2 ) {
+		
+		stand = cantbits;
+	}
+	else {
+		
+		stand = cantbits2;
+	}
+	
+	cout << endl;*/
+	int sum [32];
+	
+	cout << "Sumando..." << endl;
+	
+	for ( int k = 0; k < 6; k++ ){
+	//suma
+	
+	
+	if ( bits [k] == '1'  && bits2 [k] == '1'  ){
+	
+		sum [k] = 0;
+		
+	}
+	else { 
+		
+		if ( bits [k] == '1' || bits2 [k] == '1'  ) {
+	
+		sum [k] = 1;
+		
+	}
+	
+	else {
+		
+		sum [k] = 0;
+		
+	}
+		
+	}
+	
+	Sleep (100);
+	cout << "..";
+	
+	}
+	
+	cout << endl;
+	cout << endl;
+	
+	cout << "Este es el resultado de la suma: " << endl;
+	for ( int k = 0; k < 6; k++ ){
+	// lmuestra suma.
+	
+		cout << sum [k];
+	}
+	
+	cout << endl;
+	
+	return 0;
+	}
+	
+	
+	
+//}

@@ -1,0 +1,232 @@
+#include <iostream>
+#include <iostream>
+#include <conio.h>
+
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+using namespace std;
+
+
+int mat(char e) {
+	
+	
+	char abc [26];
+	char babc = 'a';
+	
+	int num [26];
+	int rang = 13;
+	int res = 0;
+	
+	for ( int m = 0; m < 26; m++ ) {
+	//llena mat	abc
+		
+		
+		abc [m] = babc;
+		babc++;
+		
+	}
+	
+	
+	for ( int k = 0; k < 26; k++ ) {
+	//llena mat	rang
+	
+	res = rang+k;
+		
+	num [k] = res;
+		
+	}
+	
+	/*cout << "Esta es la tabla de vernam actual: " << endl;
+	for ( int m = 0; m < 26; m++ ) {
+	
+
+			cout << "|";
+			cout <<  abc[m];
+			cout << "|";
+			
+	}
+	
+	cout << endl;
+	
+	for ( int k = 0; k < 26; k++ ) {
+	
+
+			cout << "|";
+			cout <<  num[k];
+			cout << "|";
+
+		}*/
+	
+	/*int regtxt [contxt];*/
+	
+	//comp	txt
+	/*for ( int a = 0; a < 26 ; a++ ) {
+		
+		if ( abc [a] == e ) {
+			
+			f = num[a];
+			
+		} 
+		
+	}*/
+	
+		
+	
+	//comp	cl
+	
+	int f;
+	
+	for ( int g = 0; g < 26; g++ ) {
+		
+		if ( abc [g] == e ) {
+			
+			f = num[g];
+			
+		} 
+		
+		
+	}
+	
+	
+	
+	/*	cout << "Este es el orden de texto hasta ahora: " << endl;
+	cout << endl;
+	*/
+	
+	
+	return f;
+}
+	
+
+
+
+int main( ) {
+	
+	char text [99];
+	int band = 0;
+	int contxt = 0;
+	
+	cout << "Ingrese el texto a encriptar por metodo vernam: " << endl;
+	
+	while ( band == 0 )	{
+		
+		text [contxt] = getch ();
+		cout << text [contxt];
+		
+		if ( text [contxt] == 13 ) {
+			
+			band = 1;
+			
+		}
+	
+	
+	contxt ++;	
+	}
+	
+	
+	contxt --;
+	
+	cout << endl;
+	
+	char cl [45];
+	band = 0;
+	int contcl = 0;
+	
+	cout << "Ingrese la clave p/ encriptar: " << endl;
+	
+	while ( band == 0 )	{
+		
+		cl [contcl] = getch ();
+		cout << cl [contcl];
+		
+		if ( cl [contcl] == 13 ) {
+			
+			band = 1;
+			
+		}
+	
+	
+	contcl ++;	
+	}
+	
+	contcl --; 
+	//se llama función mat.
+	
+	char c;
+	
+	int d;
+		
+	cout << "Se mostrara el orden del texto: " << endl;
+	
+	for ( int a = 0; a < contxt; a++ ) {
+			
+			c = text [a];
+			
+			d = mat(c);
+			
+			cout << "|";
+			cout << d;
+			cout << "|";
+			
+			
+			/*cout << "|";
+			cout <<  regtxt[e];
+			cout << "|";*/
+
+	}
+	
+	cout << endl;
+	cout << endl;
+	
+		/*cout << endl;
+		cout << "Este es el orden de clave hasta ahora: " << endl;
+		cout << endl;*/
+	
+	cout << "Se mostrara el orden de la clave: " << endl;
+	
+	for ( int i = 0; i < contcl; i++ ) {
+	
+			c = cl [i];
+			
+			d = mat (c);
+			
+			cout << "|";
+			cout << d;
+			cout << "|";
+
+
+			/*cout << "|";
+			cout <<  regcl[e];
+			cout << "|";*/
+			
+
+	}
+		
+	
+	return 0;
+}
+
+
+	
+/* void/int [nombrefun]() {
+	
+	
+	
+}
+
+void/int [nombrefun]() {
+	
+	
+	
+}
+
+void/int [nombrefun]() {
+	
+	
+	
+}
+
+
+
+}*/

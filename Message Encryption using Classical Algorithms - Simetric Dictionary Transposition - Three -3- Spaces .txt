@@ -1,0 +1,266 @@
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+using namespace std;
+
+int main() {
+	cout << "Bienvenido al programa de transposición columnar." << endl;
+	cout << "\n" << endl;
+	cout << "Procederemos a escribir la clave de encriptación simetrica." << endl;
+	int l;
+	cout << "Digite la longitud de la clave: " << endl;
+	cin >> l;
+	int preg;
+	int op = (l-2)*l;
+	cout << "Su texto podra ser de: " << op << endl;
+	cout << "La longitud de la clave es " << l <<" ¿Esta seguro que esta es la longitud?(1=si/0=no) \n" ;
+	cin >> preg;
+	while ( preg != 1 ) {
+		cout << "Digite la longitud de la clave: " << endl;
+		cin >> l;
+		op = (l-2)*l;
+		cout << "La longitud de la clave es " << l << " y el texto sera de: " << op << ".Esta seguro que esta es la longitud?(1=si/0=no) \n" ;
+		cin >> preg;
+	}
+		
+	cout << "Digite la clave para la encriptación simétrica(debe ingresar letra por letra.): " << endl;
+	l = l-1;
+	int m = l-1;
+	cout << endl;
+	cout << "El array tendrá una extensión de  " << l << "x" << m << endl;
+	cout << endl;
+	char enc[l][m];
+	int ord[l];
+	char text;
+	
+	for ( int i = 0; i <= l; i++){
+	
+
+	cout << "letra: " << endl;
+	cin >> text;
+	cout  << endl;
+	enc[i][0] = text;
+	cout << "Ud ha escrito: ";
+	
+	for (int k = 0; k <= i; k++){
+		
+	cout << enc [k][0];
+	
+	}	
+	
+	
+	cout  << endl;
+	}
+	
+	
+	char abc[26];
+	char a = 'a';
+	//llena abecedario
+	for ( int j = 0; j < 26; j++){
+	
+	abc[j] = a;
+	a++;
+		
+	}
+	
+	int seg[l];
+	
+	for ( int i = 0; i <= l; i++){
+	//for para encontrar letra
+	cout << "Buscando letra: " << enc [i][0] << endl;
+		for ( int c = 0; c < 26; c++){
+		//for para buscar posición
+		if ( enc [i][0] == abc [c] )	{
+		
+		c = c+1;
+		seg[i] = c; 
+		
+		cout << "Encontrada! Es la num.: " << seg[i] << endl;	
+		}
+	
+		}
+	cout  << endl;
+	}
+	
+//ordenar clave numericamente.
+
+for ( int i = 0; i <= l; i++) {
+int c = l; //tag es el numero en orden
+cout << "Ordenando letra:" << seg [i] << endl;
+cout  << endl;
+	for ( int k = l; k >= 0; k--) {
+
+		if ( seg [i] < seg [k])	{
+	//	enc [i][1] = tag;
+		c = c-1;
+		}
+		
+		else {
+			if ( seg [i] == seg [k]  && k != i )	{
+	//		enc [i][1] = tag;
+			cout << "Alerta! Hay dos iguales" << endl;
+/*			if ( power = 1 ) {
+				
+				
+				
+			}
+			int power = 1;
+			}*/
+			
+					
+	}
+	}
+	}
+	
+cout << "letra: " << seg [i] << ". Sera la num: " << c << endl;
+ord [i] = c;
+cout << "Sera la num en la columna: " << ord [i] << endl;
+cout  << endl;
+cout  << endl;
+//tag++;	
+
+}
+
+// orden columnar
+
+cout << "Este es el orden hasta ahora: " << endl;
+
+for ( int i = 0; i <= l; i++) {
+	
+cout << enc [i][0];
+
+/*	for ( int k = 0; k <= l; k++) {
+
+	cout << enc [k][i];
+	
+	}
+*/	
+}
+
+cout  << endl;
+
+for ( int i = 0; i <= l; i++) {
+	
+cout << ord [i];
+
+/*	for ( int k = 0; k <= l; k++) {
+
+	cout << enc [k][i];
+	
+	}
+*/	
+}
+
+//Texto
+	cout  << endl;
+	cout << "Digite el texto a enviar(debe ingresar letra por letra.): " << endl;
+	cout << "Su texto podra ser de: " << op << endl;
+	cout  << endl;
+
+	/*char enc[l][m];
+	int ord[l];
+	char text;*/
+	
+	for ( int i = 1; i <= m; i++){
+	
+	for ( int k = 0; k <= l; k++ ) {
+	cout  << endl;
+	cout << "letra: " << endl;
+	cin >> text;
+	enc[k][i] = text;
+	cout  << endl;
+	cout << "Ud ha escrito en la columna " << i << " lo siguiente: " << endl;
+	cout  << endl;
+	for (int c = 0; c <= k; c++){
+		
+	cout << enc [c][i];
+	
+	}
+	}	
+	
+
+	}
+	
+cout << endl;	
+cout << "Ud escribio: " << endl;
+	
+for ( int k = 1; k <= m; k++ ) {
+
+	
+	for (int c = 0; c <= l; c++){
+		
+	cout << enc [c][k];
+	
+	}
+cout  << endl;
+	}		
+ 
+cout << endl;
+
+/*	for ( k = 0; k < l; k++){
+	//for para elegir letra
+	
+	if ( seg [0] > )
+	
+	}
+	//cin << 
+*/
+	
+//transposición columnar.	
+//utilizar ord[]*
+m = m-1;
+//char tpc [m][l];
+//int h = 1;
+cout << "Se mostrara el mensaje cifrado." << endl;
+int c = 0;
+
+for ( int k = m*m; k <= l)
+for ( int i = 0; i <= ; i++) {
+//for elegir columna
+
+
+	if ( ord [i] == c )	{
+			
+	int o = ord [i];
+	
+	//	for ( int n = 0 ; n <= l ; n++){
+		for ( int k = 0; k <= m; k++ ) {
+
+		cout << enc [k][o];
+
+		cout  << endl;
+		}		
+/*
+
+		for ( int k = 0; k <= m; k++ ) {
+			
+		tpc [k][h]  = enc [n][o];
+		
+		cout << "..."  << endl;
+		}
+		
+		cout << enc [n][o];*/
+		c = c+1;	
+
+}
+
+ 
+}
+
+/*
+cout << "Su mensaje encriptado es: " << endl;
+	
+for ( int k = 0; k <= l; k++ ) {
+
+	
+	for (int c = 0; c <= m; c++){
+		
+	cout << tpc [c][k];
+	
+	}
+cout  << endl;
+	}		
+ */
+	return 0;
+}
