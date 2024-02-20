@@ -4,7 +4,7 @@ Classic encryption algorithms, like Caesar and Vigenère ciphers, use basic math
 
 Classic encryption algorithms refer to cryptographic techniques developed and used over a long period, often before the widespread adoption of computers. These algorithms are typically characterized by their simplicity, reliance on mathematical principles, and historical significance. Some of the most well-known classic encryption algorithms include:
 
-The C++ code present in this repository is provided in a text (.txt) format and intended to be shared for educational purposes.
+The C++ code present in this repository is provided in a text (.txt) format and intended to be shared for educational purposes. For practical comprehension, download the text file and compile it. The instructions are in Spanish, use a translator to solve the language gap.
 
 1. **Caesar Cipher**: Named after Julius Caesar, this is one of the earliest known substitution ciphers. It involves shifting each letter of the plaintext by a fixed number of positions in the alphabet.
 
